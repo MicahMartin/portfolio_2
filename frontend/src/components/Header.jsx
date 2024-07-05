@@ -1,6 +1,5 @@
 import animu from "../util"
 
-// frontend & styling isnt my strong suit :)
 const outerClassName = 'flex gap-4 max-w-full overflow-hidden px-4 flex-col sm:flex-row'
 const asciImgContainer = 'border-dashed border-[#40e07d]/30 overflow-clip sm:h-[11rem] sm:w-[11rem] aspect-square max-w-full w-full h-full opacity-50' 
 const bannerTextContainer = 'flex flex-col gap-4 justify-between'
@@ -20,11 +19,12 @@ const AnimuContainer = () => {
 const BannerContainer = () => {
   return (
     <div className={bannerTextContainer}>
-      <h1 className="text-2x1">Hi, I'm Kai</h1>
+      <p className="text-xl">Hi, I'm Kai</p>
       <p>
-        A software engineer babysitting microservices at  <span className="bg-[#40e07d]/75 whitespace-pre inline">              </span><br/> 
-        I also like making games, and researching cyber security. <br/> 
-        I heard ai gets you hired so I'm into now I guess.
+        A software engineer who needs a much better spiel
+      </p>
+      <p>
+      I like making games, and researching AI.
       </p>
       <p className="opacity-50 italic text-xs">
         {quoteOfTheDay}
@@ -33,7 +33,7 @@ const BannerContainer = () => {
   )
 }
 
-const Header = (props) => {
+const Header = () => {
   return (
     <div className={outerClassName}>
       <AnimuContainer />
