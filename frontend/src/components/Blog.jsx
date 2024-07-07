@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom"
 const archiveClassName = ''
 const BlogNav = () => {
   return (
@@ -80,6 +81,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
   )
 }
+
 const BackLinks = () => {
   return (
     <div className="mx-auto">
@@ -90,6 +92,7 @@ const BackLinks = () => {
  
 const blogClassName = 'flex flex-col gap-2 text-[#d3d3d3] w-full max-w-[50rem] mx-auto p-4 border border-[#40e07d]/50'
 const Blog = (props) => {
+  const {articleUrl} = useParams()
   return (
     <div className={blogClassName}>
       <Title title='Making a DSL for a Fighting Game Style Command Parser'/>
