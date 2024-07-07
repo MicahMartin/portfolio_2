@@ -7,9 +7,9 @@ const outerClassName = 'w-full max-w-[80rem] min-h-screen mx-auto border-x borde
 function App() {
   return (
     <div className={outerClassName}>
-    <Header/>
-    <NavBar/>
-    <Blog />
+      <Header/>
+      <NavBar/>
+      <Blog />
     </div>
   )
 }

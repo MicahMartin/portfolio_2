@@ -1,9 +1,9 @@
 import animu from "../util"
 
-const outerClassName = 'flex gap-4 max-w-full overflow-hidden px-4 flex-col sm:flex-row'
+const outerClassName = 'flex mx-auto gap-4 max-w-[60rem] overflow-hidden px-4 flex-col sm:flex-row'
 const asciImgContainer = 'border-dashed border-[#40e07d]/30 overflow-clip sm:h-[11rem] sm:w-[11rem] aspect-square max-w-full w-full h-full opacity-50' 
 const bannerTextContainer = 'flex flex-col gap-4 justify-between'
-const quoteOfTheDay = ` When you're anxious to learn something and need to get better as quickly as possible…the solution is to make it part of your daily life. After all, there's no greater teacher than life itself. `
+const quoteOfTheDay = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`
     
 
 const AnimuContainer = () => {
