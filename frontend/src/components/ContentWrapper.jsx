@@ -1,7 +1,8 @@
 import Markdown from 'react-markdown'
 import { useState, useEffect } from 'react'
 import file from "../assets/dsl-article.md"
-
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import {nightOwl as syntaxStyle} from 'react-syntax-highlighter/dist/esm/styles/prism'
 const ContentWrapper = ({ content }) => {
   const [markdown, setMarkdown] = useState("");
 
@@ -12,7 +13,31 @@ const ContentWrapper = ({ content }) => {
   }, []);
   console.log(markdown)
 
-  return <Markdown>{markdown}</Markdown>
+  return (  
+    <Markdown
+    children={markdown}
+    components={{
+      code(props) {
+        const {children, className, node, ...rest} = props
+        const match = /language-(\w+)/.exec(className || '')
+        return match ? (
+          <SyntaxHighlighter
+            {...rest}
+            PreTag="div"
+            children={String(children).replace(/\n$/, '')}
+            language={match[1]}
+            style={syntaxStyle}
+          />
+        ) : (
+          <code {...rest} className={className}>
+            {children}
+          </code>
+        )
+      }
+    }}
+  />
+  )
+
 }
 
 export default ContentWrapper

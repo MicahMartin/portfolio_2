@@ -1,6 +1,7 @@
 import './index.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -8,7 +9,7 @@ import {
 
 import App from './App.jsx'
 import ArticleList from './components/ArticleList.jsx';
-import Blog from './components/Blog.jsx';
+import Article from './components/Article.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "articles/:articleUrl",
-        element: <Blog />,
+        element: <Article />,
       },
     ]
   },
