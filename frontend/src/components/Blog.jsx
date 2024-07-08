@@ -1,53 +1,20 @@
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-const archiveClassName = ''
-const BlogNav = () => {
-  return (
-    <div className={archiveClassName}>
-      <h1>Blog Archive</h1>
-      <ul className="">
-        <li className="">
-          2024
-        </li>
-        <li className="">
-          2023
-        </li>
-        <li className="">
-          2022
-        </li>
-      </ul>
-    </div>
-  )
-}
+import ContentWrapper from "./ContentWrapper"
 
-const Title = ({ title }) => {
-  return (
-    <h1 className="text-2xl font-bold">
-      {title}
-    </h1>
-  )
-}
-
-const PublishDate = ({ publishDate }) => {
-  return (
-    <p className="text-s italic">
-      {publishDate}
-    </p>
-  )
-}
-
-const CodeSnippet = ({ language, code }) => {
+const CodeSnippet = ({ code }) => {
   return (
     <div className="bg-gray-900 text-white p-4 rounded-lg shadow-lg mb-4">
-      <div className="text-sm text-gray-400 mb-2">{language}</div>
       <pre className="overflow-auto">
-        <code className="language-javascript">
+        <code className="language-foobar">
           {code}
         </code>
       </pre>
     </div>
-  );
-};
-
+  )
+}
+const Title = ({ title }) => <h1 className="text-2xl font-bold">{title}</h1>
+const PublishDate = ({ publishDate }) => <p className="text-s italic">{publishDate}</p>
 
 const theCode = `
     import React from 'react';
@@ -81,24 +48,29 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
   )
 }
-
-const BackLinks = () => {
-  return (
-    <div className="mx-auto">
-    <a href="/home">home</a>
-    </div>
-  )
-}
  
 const blogClassName = 'flex flex-col gap-2 text-[#d3d3d3] w-full max-w-[50rem] mx-auto p-4 border border-[#40e07d]/50'
 const Blog = (props) => {
-  const {articleUrl} = useParams()
+  const { articleUrl } = useParams();
+  const [article, setArticle] = useState(null);
+
+  useEffect(() => {
+    import(`../assets/${articleUrl}`)
+      .then(data => setArticle(data))
+      .catch(error => {
+        console.error("Error fetching the article content:", error);
+      });
+  }, [articleUrl]);
+
+  if (!article) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className={blogClassName}>
-      <Title title='Making a DSL for a Fighting Game Style Command Parser'/>
-      <PublishDate publishDate='May 12 2023'/>
-      <Content />
-      <BackLinks />
+      <Title title={article.title}/>
+      <PublishDate publishDate={article.pubDate}/>
+      <ContentWrapper content={article.content} />
     </div>
   )
 }

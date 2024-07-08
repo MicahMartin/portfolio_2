@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-const NavBar = (props) => {
+const NavBar = () => {
   return(
     <div className="max-w-full text-sm bg-[#40e07d]/75 text-black">
       <ul className="flex justify-between">
