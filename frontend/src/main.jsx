@@ -12,6 +12,7 @@ import ArticleList from './components/ArticleList.jsx'
 import Post from './components/Post.jsx'
 import About from './components/About.jsx'
 import Experience from './components/Experience.jsx'
+import Projects from './components/Projects.jsx'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "experience",
         element: <Experience />,
+      },
+      {
+        path: "projects",
+        element: <Projects />,
       },
     ]
   },

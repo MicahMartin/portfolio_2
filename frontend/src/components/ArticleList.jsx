@@ -1,4 +1,3 @@
-import '../ArticleList.css'
 const articles = [
   {
     title:'My 10 Years Of Software Engineering In Review', 
