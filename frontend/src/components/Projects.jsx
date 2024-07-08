@@ -124,7 +124,7 @@ const ProjectYear = ({year, projects}) => {
   )
 }
 
-const projectListStyle = 'flex flex-col gap-6 w-full max-w-[50rem] mx-auto p-4 border border-[#40e07d]/50'
+const projectListStyle = 'flex flex-col gap-6 w-full max-w-[60rem] mx-auto p-4 border border-[#40e07d]/50'
 const Projects = () => {
   return (
     <div className={projectListStyle}>

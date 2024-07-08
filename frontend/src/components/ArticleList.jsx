@@ -55,7 +55,7 @@ const ArticleCard = ({title, date, subTitle, url}) => {
 
 }
 
-const articleListStyle = 'flex flex-col gap-6 w-full max-w-[50rem] mx-auto p-4 border border-[#40e07d]/50'
+const articleListStyle = 'flex flex-col gap-6 w-full max-w-[60rem] mx-auto p-4 border border-[#40e07d]/50'
 const ArticleList = () => {
   return (
     <div className={articleListStyle}>

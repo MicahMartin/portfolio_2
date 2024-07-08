@@ -1,7 +1,7 @@
 import file from "../assets/about.md"
 import { useEffect, useState } from "react"
 import Markdown from "react-markdown"
-const blogClassName = 'flex flex-col gap-12 text-[#d3d3d3] w-full max-w-[50rem] p-4 mx-auto'
+const blogClassName = 'flex flex-col gap-12 text-[#d3d3d3] w-full max-w-[60rem] p-4 mx-auto'
 
 const Title = ({ title }) => <h1 className="code-font text-[#40e07d] text-center content-center mx-auto w-full text-[50px] font-bold">{title}</h1>
 
