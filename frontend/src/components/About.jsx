@@ -29,7 +29,7 @@ const Post = () => {
   }, [])
 
   if (!markdown) {
-    return <div>Loading...</div>
+    return <div></div>
   }
   console.log(markdown)
 

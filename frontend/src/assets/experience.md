@@ -1,23 +1,23 @@
 I specialize in building web services focused on performance, scalability, and reliability. I also create networking, rendering and gameplay systems for game engines. Below is a selection of my work, most of which has been on The Boston Globe & my indie game project - Beatdown. This isn't everything I've worked on, just a some of the stuff I thought was cool. If you feel like I could help you with a project, heres my email :D I'm also on Linkedin & Github.
 
 
-[Backend Systems](Backend Systems)
+[Backend Systems](#BackendSystems)
 
-[User Generated Content Moderation](User Generated Content Moderation)
+[User Generated Content Moderation](#UserGeneratedContentModeration)
 
-[Devops Systems](Devops Systems)
+[Devops Systems](#DevopsSystems)
 
-[Paywall Stuff](Paywall Stuff)
+[Paywall Stuff](#PaywallStuff)
 
-[Content Pipelines](Content Pipelines)
+[Content Pipelines](#ContentPipelines)
 
-[Game Editors & Tooling](Game Editors & Tooling)
+[Game Editors & Tooling](#GameEditorsTooling)
 
-[Scripting Languages](Scripting Languages)
+[Scripting Languages](#ScriptingLanguages)
 
-[Virtual Controllers](Virtual Controllers)
+[Virtual Controllers](#VirtualControllers)
 
-[Rollback Networking](Rollback Networking)
+[Rollback Networking](#RollbackNetworking)
 
-[Physics Engine](Physics Engine)
+[Physics Engine](#PhysicsEngine)
 

@@ -1,7 +1,7 @@
 import file from "../assets/experience.md"
 import { useEffect, useState } from "react"
 import Markdown from 'react-markdown'
-const blogClassName = 'flex flex-col gap-12 text-[#d3d3d3] w-full max-w-[50rem] p-4 mx-auto'
+const blogClassName = 'flex flex-col gap-2 text-[#d3d3d3] w-full max-w-[50rem] p-4 mx-auto'
 
 const Experience = () => {
   const [markdown, setMarkdown] = useState(null)
@@ -13,7 +13,7 @@ const Experience = () => {
   }, [])
 
   if (!markdown) {
-    return <div>Loading...</div>
+    return <div></div>
   }
   console.log(markdown)
 

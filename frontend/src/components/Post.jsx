@@ -25,7 +25,7 @@ const Post = () => {
   }, [])
 
   if (!article) {
-    return <div>Loading...</div>
+    return <div></div>
   }
 
   return (
