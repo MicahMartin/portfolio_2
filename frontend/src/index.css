@@ -12,3 +12,31 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+img[alt$=">"] {
+  float: right;
+}
+
+img[alt$="<"] {
+  float: left;
+}
+
+img[alt$="><"] {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  float: none!important;
+}
+
+@font-face {
+  font-family: 'Glass TTY VT220';
+  src: url('./assets/Glass_TTY_VT220.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  color: #40e07d;
+}
+
+.code-font {
+  font-family: 'Glass TTY VT220', monospace;
+}

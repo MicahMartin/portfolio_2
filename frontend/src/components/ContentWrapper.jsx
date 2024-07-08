@@ -1,19 +1,8 @@
 import Markdown from 'react-markdown'
-import { useState, useEffect } from 'react'
-import file from "../assets/dsl-article.md"
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {nightOwl as syntaxStyle} from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-const ContentWrapper = () => {
-  const [markdown, setMarkdown] = useState("");
-
-  useEffect(() => {
-    fetch(file)
-      .then((res) => res.text())
-      .then((text) => setMarkdown(text));
-  }, []);
-  console.log(markdown)
-
+const ContentWrapper = ({markdown}) => {
   return (  
     <article>
     <Markdown

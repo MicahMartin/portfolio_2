@@ -8,8 +8,10 @@ import {
 } from "react-router-dom"
 
 import App from './App.jsx'
-import ArticleList from './components/ArticleList.jsx';
-import Article from './components/Article.jsx';
+import ArticleList from './components/ArticleList.jsx'
+import Post from './components/Post.jsx'
+import About from './components/About.jsx'
+import Experience from './components/Experience.jsx'
 
 const router = createBrowserRouter([
   {
@@ -22,11 +24,19 @@ const router = createBrowserRouter([
       },
       {
         path: "articles/:articleUrl",
-        element: <Article />,
+        element: <Post />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "experience",
+        element: <Experience />,
       },
     ]
   },
-]);
+])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

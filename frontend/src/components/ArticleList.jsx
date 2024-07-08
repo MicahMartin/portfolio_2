@@ -1,7 +1,7 @@
 import '../ArticleList.css'
 const articles = [
   {
-    title:'My 10 Years Of Web Development In Review', 
+    title:'My 10 Years Of Software Engineering In Review', 
     pubDate: 'Jan 7th, 2024', 
     subTitle: 'Just some personal reflection',
     url:'my-10-years-of-web-development-in-review'
@@ -57,7 +57,7 @@ const ArticleCard = ({title, date, subTitle, url}) => {
 }
 
 const articleListStyle = 'flex flex-col gap-6 w-full max-w-[50rem] mx-auto p-4 border border-[#40e07d]/50'
-const ArticleList = (props) => {
+const ArticleList = () => {
   return (
     <div className={articleListStyle}>
       {articles.map((article) => (
