@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react'
 import file from "../assets/dsl-article.md"
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {nightOwl as syntaxStyle} from 'react-syntax-highlighter/dist/esm/styles/prism'
-const ContentWrapper = ({ content }) => {
+
+const ContentWrapper = () => {
   const [markdown, setMarkdown] = useState("");
 
   useEffect(() => {
@@ -14,7 +15,9 @@ const ContentWrapper = ({ content }) => {
   console.log(markdown)
 
   return (  
+    <article>
     <Markdown
+    className="prose prose-xl dark:prose-invert prose-pre:bg-inherit"
     children={markdown}
     components={{
       code(props) {
@@ -36,6 +39,7 @@ const ContentWrapper = ({ content }) => {
       }
     }}
   />
+    </article>
   )
 
 }

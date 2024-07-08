@@ -2,7 +2,6 @@
  "content": "dsl-article.md",
  "pubDate": "May 13th, 2023",
  "title": "Making a DSL for a Fighting Game Command Parser",
- "subTitle": "making a dsl to define special move motions for fighting games",
- "forBricks": "$RichBoneHQ, 857-258-2506"
+ "subTitle": "making a dsl to define special move motions for fighting games"
 }
 

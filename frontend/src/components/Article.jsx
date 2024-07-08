@@ -3,21 +3,9 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ContentWrapper from "./ContentWrapper"
 
-const CodeSnippet = ({ code }) => {
-  return (
-    <div className="bg-gray-900 text-white p-4 rounded-lg shadow-lg mb-4">
-      <pre className="overflow-auto">
-        <code className="language-foobar">
-          {code}
-        </code>
-      </pre>
-    </div>
-  )
-}
-
-const Title = ({ title }) => <h1 className="text-2xl font-bold">{title}</h1>
+const Title = ({ title }) => <h1 className="text-3xl font-bold">{title}</h1>
 const PublishDate = ({ publishDate }) => <p className="text-s italic">{publishDate}</p>
-const blogClassName = 'flex flex-col gap-2 text-[#d3d3d3] w-full max-w-[50rem] mx-auto p-4 border border-[#40e07d]/50'
+const blogClassName = 'flex flex-col gap-2 text-[#d3d3d3] w-full max-w-[50rem] p-4 mx-auto'
 
 const Blog = () => {
   const { articleUrl } = useParams();
