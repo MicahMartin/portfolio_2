@@ -6,7 +6,7 @@ const ContentWrapper = ({markdown}) => {
   return (  
     <article>
     <Markdown
-    className="prose prose-xl dark:prose-invert prose-pre:bg-inherit"
+    className="prose max-w-none prose-xl dark:prose-invert prose-pre:bg-inherit"
     children={markdown}
     components={{
       code(props) {
